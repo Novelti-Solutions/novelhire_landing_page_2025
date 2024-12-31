@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./header";
 import HomePage from "./home-page";
+import Footer from "./footer";
 
 const HomeLayout = ({ children }) => {
   return (
@@ -12,10 +13,9 @@ const HomeLayout = ({ children }) => {
         </div>
       </div>
 
-      <main className="mx-auto max-w-screen-xl p-8 md:py-10 lg:py-10">
-        {children}
-      </main>
+      <main className="mx-auto max-w-screen-xl p-8 md:py-10 lg:py-10">{children}</main>
       {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { ChevronRight, MenuIcon, User } from "lucide-react";
 import { Drawer, DrawerContent } from "./ui/drawer";
 import { useBoolean } from "@/hooks/use-boolean";
+import ThemeDrawer from "./theme-drawer";
 
 const Header = () => {
   const { value, onTrue, onFalse } = useBoolean();
@@ -69,6 +70,8 @@ const Header = () => {
             <User />
             Sign in
           </Button>
+
+          {process.env.NODE_ENV === "development" && <ThemeDrawer/>}
 
           <Button className=" bg-blue-950	 uppercase hover:bg-theme-secondary">
             <Link
