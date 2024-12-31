@@ -4,9 +4,9 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export const themes = {
   orange: {
-    primary: '#f97316', // orange-500
-    secondary: '#fb923c', // orange-400
-    accent: '#c2410c', // orange-700
+    primary: '#172554', // orange-500
+    secondary: '#1e3a8a', // orange-400
+    accent: '#60a5fa', // orange-700
   },
   violet: {
     primary: '#8b5cf6', // violet-500
