@@ -16,7 +16,7 @@ const HomePage = () => {
             <span className="text-xs font-bold uppercase text-muted-foreground">
               NovelHire Talent Solutions
             </span>
-            <h2 className="text-2xl font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
+            <h2 className="text-2xl text-theme-primary  font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
               Interviews Reimagined
             </h2>
 
