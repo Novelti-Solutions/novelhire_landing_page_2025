@@ -1,14 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-	"./src/section/**/*.{js,ts,jsx,tsx,mdx}"
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/react-hook-form/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+        montserrat: ["var(--font-montserrat)"],
+        instrument: ["var(--font-instrument-sans)"],
+        epilogue: ["var(--font-epilogue)"],
+        space: ["var(--font-space-mano)"],
+      },
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
@@ -59,11 +68,11 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-			  theme: {
-				primary: 'var(--theme-primary)',
-				secondary: 'var(--theme-secondary)',
-				accent: 'var(--theme-accent)',
-			  },
+        theme: {
+          primary: 'var(--theme-primary)',
+          secondary: 'var(--theme-secondary)',
+          accent: 'var(--theme-accent)',
+          },
   		}
   	}
   },
