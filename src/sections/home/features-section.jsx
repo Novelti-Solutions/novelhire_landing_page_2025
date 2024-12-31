@@ -1,0 +1,20 @@
+
+import CoursouselComponent from '@/components/courousel-component'
+import TabsComponent from '@/components/tab-component/tabs-component'
+import React from 'react'
+
+const FeaturesSection = () => {
+  return (
+    <section className='w-full bg-white py-10'>
+        <div className='flex justify-center items-start flex-col cursor-pointer'>
+            <p className='uppercase tracking-widest font-semibold mb-4'>Features</p>
+            <h1 className='text-2xl md:text-3xl md:w-[30%] text-theme-primary font-semibold mb-10'>Meet NovelHire: <span className='text-theme-secondary'>Smarter Hiring Starts Here</span></h1>
+            <TabsComponent/>
+            <CoursouselComponent/>
+        </div>
+      
+    </section>
+  )
+}
+
+export default FeaturesSection
