@@ -65,15 +65,15 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
-            className="uppercase bg-transparent border-blue-950"
+            className="uppercase bg-transparent rounded-none border-theme-primary"
           >
             <User />
             Sign in
           </Button>
 
-          {process.env.NODE_ENV === "development" && <ThemeDrawer/>}
+          {process.env.NODE_ENV === "development" && <ThemeDrawer />}
 
-          <Button className=" bg-blue-950	 uppercase hover:bg-theme-secondary">
+          <Button className="bg-theme-primary rounded-none	 uppercase hover:bg-theme-secondary">
             <Link
               href="/requestdemo"
               className="text-sm font-semibold uppercase"

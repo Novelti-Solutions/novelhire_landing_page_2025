@@ -28,13 +28,13 @@ const HomePage = () => {
             <div className="flex items-center mt-4 gap-4">
               <Button
                 variant="outline"
-                className="uppercase bg-transparent border-blue-950"
+                className="uppercase bg-transparent border-theme-primary rounded-none"
               >
                 <User />
                 Features
               </Button>
 
-              <Button className=" bg-blue-950	 uppercase hover:bg-theme-secondary">
+              <Button className=" bg-theme-primary rounded-none	 uppercase hover:bg-theme-secondary">
                 <Link
                   href="/requestdemo"
                   className="text-sm font-semibold uppercase"
