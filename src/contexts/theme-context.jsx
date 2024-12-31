@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export const themes = {
-  orange: {
+  blue: {
     primary: '#172554', // orange-500
     secondary: '#1e3a8a', // orange-400
     accent: '#60a5fa', // orange-700
@@ -28,7 +28,7 @@ export const themes = {
 const ThemeContext = createContext();
 
 export function ThemeColorProvider({ children }) {
-  const [currentTheme, setCurrentTheme] = useState('violet');
+  const [currentTheme, setCurrentTheme] = useState('blue');
 
   useEffect(() => {
     // Apply theme colors to CSS variables
