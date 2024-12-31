@@ -8,6 +8,7 @@ export default function Home() {
     <HomeLayout>
       <FeaturesSection />
       <HowItWorks />
+      <FeaturesSection />
     </HomeLayout>
   );
 }
