@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const HomePage = () => {
   return (
-    <div className="mx-auto max-w-screen-xl p-8 md:py-10 lg:py-10">
+    <div className="mx-auto max-w-screen-xl  p-8 md:py-10 lg:py-20">
       <section className="py-10">
         <div className={cn("flex gap-8  flex-col justify-between lg:flex-row")}>
           {/* section 1 */}
@@ -46,8 +46,8 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="flex  w-full justify-center lg:w-[40%] ">
-            <video
+          <div className="flex  w-full bg-gray-50 justify-center lg:w-[40%] ">
+            {/* <video
               autoPlay
               muted
               loop
@@ -56,7 +56,7 @@ const HomePage = () => {
             >
               <source src="video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
             {/* 
             <iframe
               width={"100%"}
