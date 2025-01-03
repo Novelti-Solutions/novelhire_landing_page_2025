@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
           alt="df"
           width={500}
           height={500}
-          className="w-full h-60 -z-10  opacity-40 object-cover absolute top-0"
+          className="w-full h-48 -z-10  opacity-40 object-cover absolute top-0"
         />
         {/* image2 */}
         <Image
@@ -24,14 +24,14 @@ const Layout = ({ children }) => {
           alt="df"
           width={500}
           height={500}
-          className="w-full h-60 -z-10 opacity-40  object-cover absolute bottom-0"
+          className="w-full h-48 -z-10 opacity-40  object-cover absolute bottom-0"
         />
 
         <Header />
         <HomePage
           caption="Features"
           title="Discover the Features That Power Smarter Hiring"
-          subtitle="From advanced assessments to collaborative tools, NovelHire equips you with everything you need to hire better, faster, and more confidently."
+          subTitle="From advanced assessments to collaborative tools, NovelHire equips you with everything you need to hire better, faster, and more confidently."
           buttons={
             <div className="flex items-center mt-4 gap-4">
               <Link

@@ -15,31 +15,30 @@ const HomeLayout = ({ children }) => {
           <HomePage
             caption="NovelHire Talent Solutions"
             title="Interviews Reimagined"
-            subtitle="Effortlessly identify, evaluate, and onboard top technical talent with cutting-edge tools and data-driven insights."
+            subTitle="Effortlessly identify, evaluate, and onboard top technical talent with cutting-edge tools and data-driven insights."
             buttons={
               <div className="flex items-center mt-4 gap-4">
-                <Button
-                  variant="outline"
-                  className="uppercase hover:bg-transparent bg-transparent border-theme-primary rounded-none"
+                <Link
+                  href="/features"
+                  className="text-sm  font-semibold uppercase"
                 >
-                  <User />
-                  <Link
-                    href="/features"
-                    className="text-sm font-semibold uppercase"
+                  <Button
+                    variant="outline"
+                    className="uppercase hover:bg-transparent bg-transparent border-theme-primary rounded-none"
                   >
+                    <User />
                     Features
-                  </Link>
-                </Button>
-
-                <Button className=" bg-theme-primary rounded-none	 uppercase hover:bg-theme-secondary">
-                  <Link
-                    href="/requestdemo"
-                    className="text-sm font-semibold uppercase"
-                  >
+                  </Button>
+                </Link>
+                <Link
+                  href="/requestdemo"
+                  className="text-sm font-semibold uppercase"
+                >
+                  <Button className=" bg-theme-primary rounded-none	uppercase hover:bg-theme-secondary">
                     request demo
-                  </Link>
-                  <ChevronRight />
-                </Button>
+                    <ChevronRight />
+                  </Button>
+                </Link>
               </div>
             }
           />
