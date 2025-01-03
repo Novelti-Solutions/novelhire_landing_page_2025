@@ -43,7 +43,7 @@ const FAQSection = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-between lg:flex-row">
+      <div className="flex flex-col items-center justify-between lg:flex-row mx-auto max-w-screen-xl p-8 md:py-10 lg:py-10">
         <div className="flex items-center flex-col gap-4  lg:items-start">
           <span className="text-xs font-bold uppercase text-muted-foreground">
             FAQ Section
@@ -70,7 +70,7 @@ const FAQSection = () => {
         value={currentAccordion}
         onValueChange={setCurrentAccordion}
         collapsible
-        className="w-full"
+        className="mx-auto max-w-screen-xl p-8 md:py-10 lg:py-10"
       >
         <div className="grid my-12 gap-x-4 grid-cols-12">
           {data.map(({ id, question, answer }) => (
