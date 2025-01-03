@@ -65,7 +65,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
-            className="uppercase bg-transparent rounded-none border-theme-primary"
+            className="uppercase hover:bg-transparent bg-transparent rounded-none border-theme-primary"
           >
             <User />
             Sign in
