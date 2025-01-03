@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <HomeLayout>
       <FeaturesSection />
+      <FeaturesSection />
       <HowItWorks />
       <CallToAction/>
       <FAQSection />

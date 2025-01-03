@@ -1,7 +1,6 @@
-
-import CoursouselComponent from '@/components/courousel-component'
-import TabsComponent from '@/components/tab-component/tabs-component'
-import React from 'react'
+import CoursouselComponent from "@/components/courousel-component";
+import TabsComponent from "@/components/tab-component/tabs-component";
+import React from "react";
 
 const FeaturesSection = () => {
   return (
@@ -14,7 +13,7 @@ const FeaturesSection = () => {
         </div>
       
     </section>
-  )
-}
+  );
+};
 
-export default FeaturesSection
+export default FeaturesSection;
