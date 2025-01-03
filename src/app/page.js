@@ -3,13 +3,15 @@ import HowItWorks from "@/sections/home/how-it-works";
 import FeaturesSection from "@/sections/home/features-section";
 import Image from "next/image";
 import CallToAction from "@/sections/home/call-to-action";
+import FAQSection from "@/sections/home/faq-section";
 
 export default function Home() {
   return (
     <HomeLayout>
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
       <HowItWorks />
-      <CallToAction/>
+      {/* <CallToAction/> */}
+      <FAQSection />
     </HomeLayout>
   );
 }

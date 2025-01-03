@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import TimelineItem from "./time-line";
 
 // items
@@ -89,6 +90,11 @@ const HowItWorks = () => {
             isLast={index === items.length - 1}
           />
         ))}
+      </div>
+      <div className="flex justify-center ">
+        <Button className="bg-theme-primary hover:bg-theme-secondary">
+          Get Started
+        </Button>
       </div>
     </section>
   );
