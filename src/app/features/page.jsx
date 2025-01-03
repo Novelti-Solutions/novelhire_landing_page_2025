@@ -50,6 +50,11 @@ export default function FeaturesPage() {
         ]}
         img="/features/profile.svg"
       />
+      <TeamProductivity />
+      <CallToAction />
+
+      <FAQSection />
+      <Footer />
     </>
   );
 }
