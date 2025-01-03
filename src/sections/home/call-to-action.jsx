@@ -4,7 +4,7 @@ import React from "react";
 const CallToAction = () => {
   return (
     <div
-      className={`h-80 md:py-10 lg:py-10 py-10 w-full flex justify-center items-center gap-5 bg-[url("/illustration.svg")] flex-col bg-cover bg-center`}
+      className={`h-80 bg-white md:py-10 lg:py-10 py-10 w-full flex justify-center items-center gap-5 bg-[url("/illustration.svg")] flex-col bg-cover bg-center`}
     >
       <p className="text-xs font-bold uppercase text-gray-400/60 text-center">Get started with novelhire!</p>
       <h1 className="text-5xl font-bold text-theme-primary text-center">Start Hiring Smarter Today!</h1>

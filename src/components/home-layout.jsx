@@ -45,7 +45,7 @@ const HomeLayout = ({ children }) => {
         </div>
       </div>
 
-      <main>
+      <main className="bg-[#f9f7f7]">
         {children}
       </main>
       {/* <Footer /> */}
