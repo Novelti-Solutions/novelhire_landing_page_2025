@@ -9,7 +9,7 @@ const TabsComponent = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center flex-wrap">
         {tabData.map((tab, index) => {
           return (
             <div

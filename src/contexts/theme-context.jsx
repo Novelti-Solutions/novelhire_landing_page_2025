@@ -5,7 +5,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 export const themes = {
   blue: {
     primary: '#172554', // orange-500
-    secondary: '#8b5cf6', // orange-400
+    secondary: '#6366f1', // orange-400
     accent: '#a78bfa', // orange-700
   },
   violet: {

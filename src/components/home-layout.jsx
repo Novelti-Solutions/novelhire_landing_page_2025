@@ -13,7 +13,7 @@ const HomeLayout = ({ children }) => {
         </div>
       </div>
 
-      <main className="mx-auto max-w-screen-xl p-8 md:py-10 lg:py-10">
+      <main>
         {children}
       </main>
       {/* <Footer /> */}
