@@ -39,12 +39,10 @@ const FAQSection = () => {
   //   states
   const [currentAccordion, setCurrentAccordion] = useState(null);
 
-  console.log(currentAccordion);
-
   return (
-    <>
-      <div className="flex flex-col items-center justify-between lg:flex-row mx-auto max-w-screen-xl p-8 md:py-10 lg:py-10">
-        <div className="flex items-center flex-col gap-4  lg:items-start">
+    <div className=" p-8 md:py-10 lg:py-10">
+      <div className="flex flex-col items-center justify-between lg:flex-row mx-auto max-w-screen-xl">
+        <div className="flex items-center flex-col gap-2  lg:items-start">
           <span className="text-xs font-bold uppercase text-muted-foreground">
             FAQ Section
           </span>
@@ -52,7 +50,7 @@ const FAQSection = () => {
             Frequently asked <span className="text-fuchsia-950">questions</span>
           </h2>
 
-          <p className="text-sm text-blue-950  md:text-base lg:text-lg">
+          <p className="text-sm font-semibold text-blue-950  md:text-base lg:text-base">
             Everything you need to know about Spark
           </p>
         </div>
@@ -65,29 +63,58 @@ const FAQSection = () => {
           </div>
         </div>
       </div>
-      <Accordion
-        type="single"
-        value={currentAccordion}
-        onValueChange={setCurrentAccordion}
-        collapsible
-        className="mx-auto max-w-screen-xl p-8 md:py-10 lg:py-10"
-      >
-        <div className="grid my-12 gap-x-4 grid-cols-12">
-          {data.map(({ id, question, answer }) => (
-            <AccordionItem
-              key={id}
-              value={id}
-              className={cn("col-span-12", "lg:col-span-6", "px-4", "bg-white")}
-            >
-              <AccordionTrigger className="hover:no-underline">
-                {question}
-              </AccordionTrigger>
-              <AccordionContent>{answer}</AccordionContent>
-            </AccordionItem>
-          ))}
+
+      {/* Loading State */}
+      {loading && (
+        <div className="my-4 border-2 p-4 text-center text-gray-500">
+          Loading FAQs...
         </div>
-      </Accordion>
-    </>
+      )}
+
+      {/* Error State */}
+      {error && (
+        <div className="my-4 border-2 p-4 text-center text-red-500">
+          Error loading FAQs: {error.message || "An unexpected error occurred."}
+        </div>
+      )}
+
+      {/* No Data State */}
+      {!loading && !error && (!data || data.length === 0) && (
+        <div className="my-4 border-2 p-4 text-center text-gray-500">
+          No FAQs available at the moment.
+        </div>
+      )}
+
+      {!loading && !error && data && data.length > 0 && (
+        <Accordion
+          type="single"
+          value={currentAccordion}
+          onValueChange={setCurrentAccordion}
+          collapsible
+          className="mx-auto max-w-screen-xl "
+        >
+          <div className="grid my-8 gap-x-4 grid-cols-12">
+            {data?.map(({ id, question, answer }) => (
+              <AccordionItem
+                key={id}
+                value={id}
+                className={cn(
+                  "col-span-12",
+                  "lg:col-span-6",
+                  "px-4",
+                  "bg-white"
+                )}
+              >
+                <AccordionTrigger className="hover:no-underline">
+                  {question}
+                </AccordionTrigger>
+                <AccordionContent>{answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </div>
+        </Accordion>
+      )}
+    </div>
   );
 };
 
