@@ -1,6 +1,12 @@
 import Content from "@/components/tab-component/content";
 import Content0 from "@/components/tab-component/content";
-import { BriefcaseConveyorBelt, Handshake, Sparkles, Video, Workflow } from "lucide-react";
+import {
+  BriefcaseConveyorBelt,
+  Handshake,
+  Sparkles,
+  Video,
+  Workflow,
+} from "lucide-react";
 
 export const footerData = {
   features: [
@@ -31,28 +37,33 @@ export const footerData = {
 
 export const tabData = [
   {
+    id: 1,
     title: "Smart",
-    symbol:<Video className="h-4 w-4"/>,
-    content:<Content activeTab="Smart"/>
+    symbol: <Video className="h-4 w-4" />,
+    content: <Content activeTab="Smart" />,
   },
   {
+    id: 2,
     title: "Automation",
-    symbol:<Workflow className="h-4 w-4"/>,
-    content:<Content activeTab="Automation"/>
+    symbol: <Workflow className="h-4 w-4" />,
+    content: <Content activeTab="Automation" />,
   },
   {
+    id: 3,
     title: "Insights",
-    symbol:<Sparkles className="h-4 w-4"/>,
-    content:<Content activeTab="Insights"/>
+    symbol: <Sparkles className="h-4 w-4" />,
+    content: <Content activeTab="Insights" />,
   },
   {
+    id: 4,
     title: "Collaboration",
-    symbol:<Handshake className="h-4 w-4"/>,
-    content:<Content activeTab="Collaboration"/>
+    symbol: <Handshake className="h-4 w-4" />,
+    content: <Content activeTab="Collaboration" />,
   },
   {
+    id: 5,
     title: "Experience",
-    symbol:<BriefcaseConveyorBelt className="h-4 w-4"/>,
-    content:<Content activeTab="Experience"/>
+    symbol: <BriefcaseConveyorBelt className="h-4 w-4" />,
+    content: <Content activeTab="Experience" />,
   },
 ];
