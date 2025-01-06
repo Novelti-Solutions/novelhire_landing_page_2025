@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { ThemeColorProvider } from "@/contexts/theme-context";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata = {
   title: "Novel Hire",
@@ -49,9 +50,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} ${montserrat.variable} ${instrumentSans.variable} ${epilogue.variable} ${spaceMono.variable}`}
       >
-        
-        <ThemeColorProvider>{children}
-      </ThemeColorProvider>
+        <ThemeColorProvider>
+          <Toaster
+            position="top-right"
+            richColors // More vibrant colors
+            closeButton // Add close button
+          />
+          {children}
+        </ThemeColorProvider>
       </body>
     </html>
   );
