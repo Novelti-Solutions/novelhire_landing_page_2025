@@ -12,11 +12,11 @@ const Header = () => {
   const { value, onTrue, onFalse } = useBoolean();
   return (
     <>
-      <div className="hidden items-center justify-between py-4 px-16 lg:flex">
+      <div className="hidden  items-center justify-between py-4 px-16 lg:flex">
         <div className="flex items-center gap-12">
           <Link href="/">
             <Image
-              src="/Logo.svg"
+              src="/logo.svg"
               alt="logo"
               width={120}
               height={200}
@@ -82,10 +82,10 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between p-4 shadow-md lg:hidden">
+      <div className="flex items-center justify-between p-4 lg:hidden">
         <Link href="/">
           <Image
-            src="/Logo.svg"
+            src="/logo.svg"
             alt="logo"
             width={120}
             height={200}
@@ -100,30 +100,38 @@ const Header = () => {
       <Drawer open={value} onClose={onFalse}>
         <DrawerContent>
           <ul className="my-2 flex flex-col items-center gap-2">
-            <Button
-              variant="ghost"
-              className="w-full text-sm font-semibold uppercase"
-            >
-              <Link href="/">Home</Link>
-            </Button>
-            <Button
-              variant="ghost"
-              className="w-full text-sm font-semibold uppercase"
-            >
-              <Link href="/features">Features</Link>
-            </Button>
-            <Button
-              variant="ghost"
-              className="w-full text-sm font-semibold uppercase"
-            >
-              <Link href="/requestdemo">Pricing</Link>
-            </Button>
-            <Button
-              variant="ghost"
-              className="w-full text-sm font-semibold uppercase"
-            >
-              <Link href="/contactus">Help</Link>
-            </Button>
+            <Link href="/" className="w-full">
+              <Button
+                variant="ghost"
+                className="w-full text-sm font-semibold uppercase"
+              >
+                Home
+              </Button>
+            </Link>
+            <Link href="/features" className="w-full">
+              <Button
+                variant="ghost"
+                className="w-full text-sm font-semibold uppercase"
+              >
+                Features
+              </Button>
+            </Link>
+            <Link href="/requestdemo" className="w-full">
+              <Button
+                variant="ghost"
+                className="w-full text-sm font-semibold uppercase"
+              >
+                Pricing
+              </Button>
+            </Link>
+            <Link href="/contactus" className="w-full">
+              <Button
+                variant="ghost"
+                className="w-full text-sm font-semibold uppercase"
+              >
+                Help
+              </Button>
+            </Link>
           </ul>
         </DrawerContent>
       </Drawer>

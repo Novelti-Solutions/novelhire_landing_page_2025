@@ -100,7 +100,7 @@ const AllFaqs = () => {
   };
 
   return (
-    <div className="mx-auto max-w-screen-md">
+    <div className="mx-auto max-w-screen-md my-10">
       <div className="flex flex-col items-center gap-4">
         <Badge variant="outline" className="rounded-full">
           NovelHire

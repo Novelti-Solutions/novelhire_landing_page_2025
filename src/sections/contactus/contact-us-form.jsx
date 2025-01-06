@@ -58,7 +58,7 @@ const ContactUsForm = () => {
   }, [isSubmitted.value, error]);
 
   return (
-    <div className="flex w-full flex-col gap-3 py-4 lg:w-1/2 lg:py-0">
+    <div className="flex w-full flex-col gap-3 px-4 py-4 lg:w-1/2 lg:py-0">
       <h1 className="text-3xl font-bold md:text-5xl lg:text-6xl">Contact us</h1>
 
       <Form {...form}>

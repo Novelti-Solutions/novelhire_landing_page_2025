@@ -1,5 +1,5 @@
-import Footer from "@/components/footer";
 import Assessment from "@/sections/features/assessment";
+import HeaderHeroSection from "@/sections/features/header-hero-section";
 import TeamProductivity from "@/sections/features/team-productivity";
 import CallToAction from "@/sections/home/call-to-action";
 import FAQSection from "@/sections/home/faq-section";
@@ -9,7 +9,9 @@ export const metadata = {
 };
 export default function FeaturesPage() {
   return (
-    <>
+    <section>
+      {/* header and hero */}
+      <HeaderHeroSection />
       <Assessment
         subheading="Assess Skills with Precision"
         heading1="Smart, Customizable"
@@ -54,7 +56,6 @@ export default function FeaturesPage() {
       <CallToAction />
 
       <FAQSection />
-      <Footer />
-    </>
+    </section>
   );
 }

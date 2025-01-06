@@ -1,8 +1,6 @@
-import Footer from "@/components/footer";
-import Assessment from "@/sections/features/assessment";
-import TeamProductivity from "@/sections/features/team-productivity";
 import CallToAction from "@/sections/home/call-to-action";
 import FAQSection from "@/sections/home/faq-section";
+import HeaderHeroSection from "@/sections/usecases/header-hero-section";
 import UsecasesSection from "@/sections/usecases/usecases-section";
 
 export const metadata = {
@@ -10,12 +8,12 @@ export const metadata = {
 };
 export default function UsecasesPage() {
   return (
-    <>
-      <UsecasesSection/>
+    <section>
+      {/* header and hero section */}
+      <HeaderHeroSection />
+      <UsecasesSection />
       <CallToAction />
-
       <FAQSection />
-      <Footer />
-    </>
+    </section>
   );
 }
