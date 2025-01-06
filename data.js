@@ -35,7 +35,7 @@ export const footerData = {
   ],
 };
 
-export const tabData = [
+export const featuresTabData = [
   {
     id: 1,
     title: "Smart",
@@ -65,5 +65,38 @@ export const tabData = [
     title: "Experience",
     symbol: <BriefcaseConveyorBelt className="h-4 w-4" />,
     content: <Content activeTab="Experience" />,
+  },
+];
+
+export const usecasesTabData = [
+  {
+    id: 1,
+    title: "Scaling",
+    symbol: <Video className="h-4 w-4" />,
+    content: <Content0 activeTab="Scaling" />,
+  },
+  {
+    id: 2,
+    title: "Specialization",
+    symbol: <Workflow className="h-4 w-4" />,
+    content: <Content0 activeTab="Specialization" />,
+  },
+  {
+    id: 3,
+    title: "Efficiency",
+    symbol: <Sparkles className="h-4 w-4" />,
+    content: <Content0 activeTab="Efficiency" />,
+  },
+  {
+    id: 4,
+    title: "Enhance",
+    symbol: <Handshake className="h-4 w-4" />,
+    content: <Content0 activeTab="Enhance" />,
+  },
+  {
+    id: 5,
+    title: "Reduce Bias",
+    symbol: <BriefcaseConveyorBelt className="h-4 w-4" />,
+    content: <Content0 activeTab="Reduce Bias" />,
   },
 ];

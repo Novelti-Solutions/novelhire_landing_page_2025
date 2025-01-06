@@ -1,14 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { Button } from "./ui/button";
-import { CheckCircle, ChevronRight, User } from "lucide-react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const HomePage = ({ caption, title, subTitle, buttons }) => {
   return (
-    <div className="mx-auto max-w-screen-xl   p-8 md:py-10 lg:py-20">
+    <div className="mx-auto max-w-screen-xl p-8 md:py-10 lg:py-20">
       <section className="py-10">
         <div className={cn("flex gap-8  flex-col justify-between lg:flex-row")}>
           {/* section 1 */}
@@ -16,7 +12,7 @@ const HomePage = ({ caption, title, subTitle, buttons }) => {
             <span className="text-xs font-bold uppercase text-muted-foreground">
               {caption}
             </span>
-            <h2 className="text-2xl text-theme-primary  font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
+            <h2 className="text-2xl text-[#172554]  font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
               {title}
             </h2>
 

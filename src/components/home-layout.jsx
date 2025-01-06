@@ -24,7 +24,7 @@ const HomeLayout = ({ children }) => {
                 >
                   <Button
                     variant="outline"
-                    className="uppercase hover:bg-transparent bg-transparent border-theme-primary rounded-none"
+                    className="uppercase hover:bg-transparent bg-transparent border-black rounded-none"
                   >
                     <User />
                     Features
@@ -34,7 +34,7 @@ const HomeLayout = ({ children }) => {
                   href="/requestdemo"
                   className="text-sm font-semibold uppercase"
                 >
-                  <Button className=" bg-theme-primary rounded-none	uppercase hover:bg-theme-secondary">
+                  <Button className="bg-gradient-to-b from-theme-primary to-theme-secondary rounded-none	uppercase">
                     request demo
                     <ChevronRight />
                   </Button>

@@ -1,16 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import { tabData } from "../../../data";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
-const TabsComponent = () => {
+const TabsComponent = ({data}) => {
   const [active, setActive] = useState(0);
 
   return (
     <div className="w-full">
       <div className="w-full flex justify-center items-center flex-wrap">
-        {tabData.map((tab, index) => {
+        {data.map((tab, index) => {
           return (
             <div
               key={tab.id}
@@ -23,7 +22,7 @@ const TabsComponent = () => {
           );
         })}
       </div>
-      <div className="p-2 mt-10">{tabData[active].content}</div>
+      <div className="p-2 mt-10">{data[active].content}</div>
     </div>
   );
 };
