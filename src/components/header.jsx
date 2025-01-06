@@ -65,7 +65,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
-            className="uppercase hover:bg-transparent bg-transparent rounded-none border-theme-primary"
+            className="uppercase hover:bg-transparent bg-transparent rounded-none border-black"
           >
             <User />
             Sign in
@@ -74,7 +74,7 @@ const Header = () => {
           {process.env.NODE_ENV === "development" && <ThemeDrawer />}
 
           <Link href="/requestdemo" className="text-sm font-semibold uppercase">
-            <Button className=" bg-theme-primary rounded-none	uppercase hover:bg-theme-secondary">
+            <Button className="bg-gradient-to-b from-theme-primary to-theme-secondary rounded-none	uppercase">
               request demo
               <ChevronRight />
             </Button>

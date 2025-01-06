@@ -14,7 +14,7 @@ const Assessment = ({
   img,
 }) => {
   return (
-    <div className="mx-auto max-w-screen-xl p-8 md:py-20 lg:py-20">
+    <div className="mx-auto max-w-screen-xl p-8 md:py-20 lg:py-20 bg-[#F9F7F7]">
      <div
         className={`flex justify-between items-center md:items-start gap-8 md:gap-40 flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""}`}
       >
