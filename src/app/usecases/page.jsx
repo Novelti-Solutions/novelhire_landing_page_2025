@@ -4,8 +4,9 @@ import HeaderHeroSection from "@/sections/usecases/header-hero-section";
 import UsecasesSection from "@/sections/usecases/usecases-section";
 
 export const metadata = {
-  title: "Usecases - Novelhire",
+  title: "NovelHire-usecases",
 };
+
 export default function UsecasesPage() {
   return (
     <section>

@@ -3,6 +3,10 @@ import HeaderHeroSection from "@/sections/requestdemo/header-hero-section";
 import HeroPage from "@/sections/requestdemo/hero-page";
 import RequestDemoForm from "@/sections/requestdemo/request-demo-form";
 
+export const metadata = {
+  title: "NovelHire-Demo",
+};
+
 export default function RequestDemopage() {
   return (
     <div>
