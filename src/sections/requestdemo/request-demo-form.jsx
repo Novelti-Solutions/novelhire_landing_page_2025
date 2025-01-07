@@ -86,10 +86,11 @@ const RequestDemoForm = () => {
       toast.error("Something went wrong");
       isSubmitted.onFalse();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSubmitted.value, error]);
 
   return (
-    <div className="relative mx-auto my-14 max-w-screen-sm py-4">
+    <div className="relative mx-auto my-14 max-w-screen-sm p-4">
       {/* <div className="absolute left-1/2 top-0 -z-10 h-72 w-1/2 -translate-x-1/2 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 blur-[200px]" /> */}
 
       <motion.div

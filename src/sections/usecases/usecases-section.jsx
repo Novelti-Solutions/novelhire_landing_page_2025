@@ -1,8 +1,6 @@
 "use client";
 
-import CoursouselComponent from "@/components/courousel-component";
 import TabsComponent from "@/components/tab-component/tabs-component";
-import React from "react";
 import { usecasesTabData } from "../../../data";
 import { Goal } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,19 +21,13 @@ const UsecasesSection = () => {
         transition={{ duration: 1, delay: 0.6 }}
         className="flex justify-center items-start flex-col cursor-pointer"
       >
-        <p className="uppercase tracking-widest font-semibold mb-4">Novelhire usecases</p>
+        <p className="uppercase tracking-widest font-semibold mb-4">
+          Novelhire usecases
+        </p>
         <h1 className="text-2xl md:text-3xl md:w-[30%] text-[#172554] font-semibold mb-10">
           Reduce time-to-hire while maintaining high hiring standards.
         </h1>
         <TabsComponent data={usecasesTabData} />
-        <div className="w-full flex justify-between items-center gap-4 flex-col md:flex-row mt-10">
-          {usecaseFooterData.map((item, index) => (
-            <Button variant="ghost" key={`${item}-${index}`} className="text-wrap">
-              <Goal className="h-4 w-4" />
-              {item}
-            </Button>
-          ))}
-        </div>
       </motion.div>
     </section>
   );
