@@ -5,7 +5,7 @@ import CallToAction from "@/sections/home/call-to-action";
 import FAQSection from "@/sections/home/faq-section";
 
 export const metadata = {
-  title: "features - Novelhire",
+  title: "NovelHire-Features",
 };
 
 const assessments = [

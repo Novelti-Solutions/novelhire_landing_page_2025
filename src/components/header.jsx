@@ -116,6 +116,15 @@ const Header = () => {
                 Features
               </Button>
             </Link>
+            <Link href="/usecases" className="w-full">
+              <Button
+                variant="ghost"
+                className="w-full text-sm font-semibold uppercase"
+              >
+                usecases
+              </Button>
+            </Link>
+
             <Link href="/requestdemo" className="w-full">
               <Button
                 variant="ghost"
