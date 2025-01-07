@@ -12,15 +12,13 @@ import { useBoolean } from "@/hooks/use-boolean";
 import { useEffect } from "react";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
+import { motion } from "motion/react";
 
 const ContactUsForm = () => {
   // custom hook
   const isSubmitted = useBoolean();
 
-  const { data, loading, error, insertData } = useMutation(
-    "/guest/contactus/mail",
-    "POST"
-  );
+  const { data, loading, error, insertData } = useMutation("/guest/contactus/mail", "POST");
 
   // react hook form
   const form = useForm({
@@ -58,58 +56,40 @@ const ContactUsForm = () => {
   }, [isSubmitted.value, error]);
 
   return (
-    <div className="flex w-full flex-col gap-3 px-4 py-4 lg:w-1/2 lg:py-0">
-      <h1 className="text-3xl font-bold md:text-5xl lg:text-6xl">Contact us</h1>
+    <motion.div className="flex w-full flex-col gap-3 px-4 py-4 lg:w-1/2 lg:py-0">
+      <h1
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-3xl font-bold md:text-5xl lg:text-6xl"
+      >
+        Contact us
+      </h1>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="my-4">
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 lg:col-span-6">
-              <RHFTextField
-                name={"first_name"}
-                placeholder="Your First Name"
-                title={"First Name"}
-              />
+              <RHFTextField name={"first_name"} placeholder="Your First Name" title={"First Name"} />
             </div>
             <div className="col-span-12 lg:col-span-6">
-              <RHFTextField
-                name={"last_name"}
-                placeholder="Your Last Name"
-                title={"LAST NAME"}
-              />
+              <RHFTextField name={"last_name"} placeholder="Your Last Name" title={"LAST NAME"} />
             </div>
 
             <div className="col-span-12">
-              <RHFTextField
-                name={"email"}
-                placeholder="Your Email"
-                title={"Email"}
-              />
+              <RHFTextField name={"email"} placeholder="Your Email" title={"Email"} />
             </div>
 
             <div className="col-span-12">
-              <RHFTextField
-                name={"company_name"}
-                placeholder="Your Company"
-                title={"Company"}
-              />
+              <RHFTextField name={"company_name"} placeholder="Your Company" title={"Company"} />
             </div>
             <div className="col-span-12">
-              <RHFArea
-                title={"Message"}
-                placeholder="Type your message here."
-                className="max-h-28 min-h-28 resize-none"
-                name={"message"}
-              />
+              <RHFArea title={"Message"} placeholder="Type your message here." className="max-h-28 min-h-28 resize-none" name={"message"} />
             </div>
 
             <div className="col-span-12">
               <div className="flex items-center gap-2">
-                <Button
-                  disabled={!form.watch().isagree || loading}
-                  className="rounded-full"
-                  size="lg"
-                >
+                <Button disabled={!form.watch().isagree || loading} className="rounded-full" size="lg">
                   {loading && <Loader2 className="animate-spin" />} Submit
                 </Button>
 
@@ -118,10 +98,7 @@ const ContactUsForm = () => {
                     name={"isagree"}
                     content={
                       <>
-                        I agree with{" "}
-                        <span className="text-theme-primary underline">
-                          Terms & Conditions
-                        </span>
+                        I agree with <span className="text-theme-primary underline">Terms & Conditions</span>
                       </>
                     }
                   />
@@ -131,7 +108,7 @@ const ContactUsForm = () => {
           </div>
         </form>
       </Form>
-    </div>
+    </motion.div>
   );
 };
 

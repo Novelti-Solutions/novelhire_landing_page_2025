@@ -16,6 +16,8 @@ import { useBoolean } from "@/hooks/use-boolean";
 import useMutation from "@/hooks/use-mutation";
 import { useEffect } from "react";
 import { toast } from "sonner";
+import { motion } from "motion/react";
+
 const payload = {
   query: {
     isactive: true,
@@ -36,10 +38,7 @@ const RequestDemoForm = () => {
   const { data: countriesCode } = useFetch("/general/countries/list", "GET");
 
   // post data
-  const { data, loading, error, insertData } = useMutation(
-    "/guest/account_request/create",
-    "POST"
-  );
+  const { data, loading, error, insertData } = useMutation("/guest/account_request/create", "POST");
 
   // react hook form
   const form = useForm({
@@ -93,41 +92,38 @@ const RequestDemoForm = () => {
     <div className="relative mx-auto my-14 max-w-screen-sm py-4">
       {/* <div className="absolute left-1/2 top-0 -z-10 h-72 w-1/2 -translate-x-1/2 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 blur-[200px]" /> */}
 
-      <div className="flex flex-col gap-4 text-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.6 }}
+        className="flex flex-col gap-4 text-center"
+      >
         <h3 className="text-3xl font-semibold md:text-5xl lg:text-6xl">
           Book a <br /> free Demo
         </h3>
         <p className="text-sm md:text-base lg:text-lg">
-          Discover the future of hiring with our AI-powered interview solution.
-          Schedule a personalized demo to see how our technology can streamline
+          Discover the future of hiring with our AI-powered interview solution. Schedule a personalized demo to see how our technology can streamline
           your recruitment process and find the best candidates efficiently.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="py-14">
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.9 }} className="py-14">
         <h4 className="text-xl font-bold">Get Started With NovelHire</h4>
         <p className="my-2 font-semibold">
-          Experience the advantages of AI in recruitment. Book your demo today
-          and revolutionize your hiring process!
+          Experience the advantages of AI in recruitment. Book your demo today and revolutionize your hiring process!
         </p>
-      </div>
+      </motion.div>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="my-4">
+        <motion.form  initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1,delay:1 }} onSubmit={form.handleSubmit(onSubmit)} className="my-4">
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 lg:col-span-6">
-              <RHFTextField
-                name={"name"}
-                placeholder="Your  Name"
-                title={"Name"}
-              />
+              <RHFTextField name={"name"} placeholder="Your  Name" title={"Name"} />
             </div>
             <div className="col-span-12 lg:col-span-6">
-              <RHFTextField
-                name={"email"}
-                placeholder="Your Email"
-                title={"Email"}
-              />
+              <RHFTextField name={"email"} placeholder="Your Email" title={"Email"} />
             </div>
 
             <div className="col-span-12 lg:col-span-4">
@@ -142,20 +138,11 @@ const RequestDemoForm = () => {
             </div>
 
             <div className="col-span-12 lg:col-span-8">
-              <RHFTextField
-                name={"mobile_no"}
-                type="number"
-                placeholder="Your Mobile No"
-                title={"Phone Number"}
-              />
+              <RHFTextField name={"mobile_no"} type="number" placeholder="Your Mobile No" title={"Phone Number"} />
             </div>
 
             <div className="col-span-12">
-              <RHFTextField
-                name={"org_name"}
-                placeholder="Your Org Name"
-                title={"Organisation name"}
-              />
+              <RHFTextField name={"org_name"} placeholder="Your Org Name" title={"Organisation name"} />
             </div>
 
             <div className="col-span-12">
@@ -170,12 +157,7 @@ const RequestDemoForm = () => {
             </div>
 
             <div className="col-span-12">
-              <RHFArea
-                title={"Message"}
-                placeholder="Type your message here."
-                className="max-h-28 min-h-28 resize-none"
-                name={"message"}
-              />
+              <RHFArea title={"Message"} placeholder="Type your message here." className="max-h-28 min-h-28 resize-none" name={"message"} />
             </div>
 
             <div className="col-span-12">
@@ -184,24 +166,17 @@ const RequestDemoForm = () => {
                   name={"isagree"}
                   content={
                     <>
-                      I agree with{" "}
-                      <span className="text-theme-primary underline">
-                        Terms & Conditions
-                      </span>
+                      I agree with <span className="text-theme-primary underline">Terms & Conditions</span>
                     </>
                   }
                 />
-                <Button
-                  disabled={!form.watch().isagree || loading}
-                  className="rounded-full"
-                  size="lg"
-                >
+                <Button disabled={!form.watch().isagree || loading} className="rounded-full" size="lg">
                   {loading && <Loader2 className="animate-spin" />} Submit
                 </Button>
               </div>
             </div>
           </div>
-        </form>
+        </motion.form>
       </Form>
     </div>
   );

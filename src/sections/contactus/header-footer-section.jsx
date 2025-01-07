@@ -1,8 +1,11 @@
+"use client";
+
 import ContactUsForm from "@/sections/contactus/contact-us-form";
 import HeroPage from "@/sections/contactus/hero-page";
 import Image from "next/image";
 import Header from "@/components/header";
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
 const HeaderHeroSection = () => {
   return (
@@ -25,10 +28,11 @@ const HeaderHeroSection = () => {
       />
 
       <Header />
-      <div
-        className={cn(
-          "flex flex-col mx-auto max-w-screen-xl py-16 md:justify-between lg:flex-row"
-        )}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className={cn("flex flex-col mx-auto max-w-screen-xl py-16 md:justify-between lg:flex-row")}
       >
         <HeroPage
           caption={"Shape the Future of Talent Development Together"}
@@ -39,7 +43,7 @@ const HeaderHeroSection = () => {
         />
 
         <ContactUsForm />
-      </div>
+      </motion.div>
     </div>
   );
 };
