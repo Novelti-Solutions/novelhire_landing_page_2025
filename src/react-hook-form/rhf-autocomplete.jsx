@@ -1,5 +1,5 @@
-import FormRequired from '@/components/form-required';
-import { Button } from '@/components/ui/button';
+import FormRequired from "@/components/form-required";
+import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -7,7 +7,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from '@/components/ui/command';
+} from "@/components/ui/command";
 import {
   Form,
   FormControl,
@@ -16,16 +16,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
+} from "@/components/ui/form";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components/ui/popover';
-import { useBoolean } from '@/hooks/use-boolean';
-import { cn } from '@/lib/utils';
-import { Check, ChevronsUpDown } from 'lucide-react';
-import { useFormContext } from 'react-hook-form';
+} from "@/components/ui/popover";
+import { useBoolean } from "@/hooks/use-boolean";
+import { cn } from "@/lib/utils";
+import { Check, ChevronsUpDown } from "lucide-react";
+import { useFormContext } from "react-hook-form";
 export const RHFAutocomplete = ({
   name,
   title,
@@ -46,7 +46,7 @@ export const RHFAutocomplete = ({
       name={name}
       render={({ field }) => (
         <FormItem className="flex w-full flex-col">
-          <FormLabel>
+          <FormLabel className="mb-1">
             <FormRequired title={title} />
           </FormLabel>
           <Popover open={isOpen.value} onOpenChange={isOpen.onFalse}>
@@ -60,9 +60,9 @@ export const RHFAutocomplete = ({
                     event.preventDefault();
                   }}
                   className={cn(
-                    'justify-between',
+                    "justify-between",
                     !Object.keys(field.value).length > 0 &&
-                      'text-muted-foreground'
+                      "text-muted-foreground"
                   )}
                 >
                   {Object.keys(field.value).length > 0
@@ -92,10 +92,10 @@ export const RHFAutocomplete = ({
                         {option?.[getOptionLabel]}
                         <Check
                           className={cn(
-                            'ml-auto',
+                            "ml-auto",
                             option[target] === field.value[target]
-                              ? 'opacity-100'
-                              : 'opacity-0'
+                              ? "opacity-100"
+                              : "opacity-0"
                           )}
                         />
                       </CommandItem>

@@ -85,6 +85,9 @@
   * {
     @apply border-border;
   }
+  html {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
   }

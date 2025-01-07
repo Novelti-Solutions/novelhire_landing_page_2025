@@ -130,28 +130,24 @@ const RequestDemoForm = () => {
               />
             </div>
 
-            <div className="col-span-12">
-              <div className="grid grid-cols-12 items-end gap-4">
-                <div className="col-span-12 lg:col-span-4">
-                  <RHFAutocomplete
-                    name={"mobile_code"}
-                    placeholder="Your Mobile code"
-                    getOptionLabel={"dial_code"}
-                    target={"code"}
-                    options={countriesCode || []}
-                    title={"Mobile code"}
-                  />
-                </div>
+            <div className="col-span-12 lg:col-span-4">
+              <RHFAutocomplete
+                name={"mobile_code"}
+                placeholder="Your Mobile code"
+                getOptionLabel={"dial_code"}
+                target={"code"}
+                options={countriesCode || []}
+                title={"Mobile code"}
+              />
+            </div>
 
-                <div className="col-span-12 lg:col-span-8">
-                  <RHFTextField
-                    name={"mobile_no"}
-                    type="number"
-                    placeholder="Your Mobile No"
-                    title={"Phone Number"}
-                  />
-                </div>
-              </div>
+            <div className="col-span-12 lg:col-span-8">
+              <RHFTextField
+                name={"mobile_no"}
+                type="number"
+                placeholder="Your Mobile No"
+                title={"Phone Number"}
+              />
             </div>
 
             <div className="col-span-12">
