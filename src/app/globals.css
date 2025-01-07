@@ -49,9 +49,20 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --theme-primary: #2b3ddf;
-    --theme-secondary: #463c8d;
-    --theme-accent: #a78bfa;
+    --theme-primary: #1E234E;
+    --theme-secondary: #463C8D;
+    --theme-accent-blue: #2B3DDF;
+    --theme-accent-purple-light: #8B7FD7;
+    --theme-accent-pink: #FF84E8;
+    --theme-primary-text:#1E234E;
+    --theme-secondary-text:#4A4F6C;
+    --theme-muted-text:#6F7399;
+    --theme-inverse-text:#FFFFFF;
+    --theme-gradient-pink-start: #FFE5F6;
+    --theme-gradient-pink-mid: #FFE0F5;
+    --theme-gradient-purple-end: #F1E3FF;
+    --theme-gradient-primary: linear-gradient(135deg, var(--gradient-pink-start) 0%, var(--gradient-pink-mid) 50%, var(--gradient-purple-end) 100%);
+    --theme-gradient-cta: linear-gradient(90deg, var(--accent-blue) 0%, var(--primary-purple) 100%);
   }
   .dark {
     --background: 0 0% 3.9%;

@@ -19,12 +19,12 @@ const HomePage = ({ caption, title, subTitle, buttons, isReverse }) => {
           transition={{ duration: 1 }}
           className="flex w-full items-center flex-col gap-4 lg:w-[40%] lg:items-start"
         >
-          <span className="text-xs font-bold uppercase text-muted-foreground">{caption}</span>
-          <h2 className="text-2xl text-[#172554]  font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
+          <span className="text-xs font-bold uppercase text-theme-mutedText">{caption}</span>
+          <h2 className="text-2xl text-theme-primaryText  font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
             {title}
           </h2>
 
-          <p className="text-sm text-blue-950 text-muted-foreground md:text-base lg:text-lg">{subTitle}</p>
+          <p className="text-sm text-theme-secondaryText text-theme-secondaryText md:text-base lg:text-lg">{subTitle}</p>
 
           {buttons && buttons}
         </motion.div>

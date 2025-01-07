@@ -15,9 +15,9 @@ const FeaturesSection = () => {
         transition={{ duration: 1, delay: 0.6 }}
         className="flex justify-center items-start flex-col cursor-pointer"
       >
-        <p className="uppercase tracking-widest font-semibold mb-4">Features</p>
-        <h1 className="text-2xl md:text-3xl md:w-[30%] text-theme-primary font-semibold mb-10">
-          Meet NovelHire: <span className="text-theme-secondary">Smarter Hiring Starts Here</span>
+        <p className="uppercase tracking-widest font-semibold mb-4 text-theme-secondaryText">Features</p>
+        <h1 className="text-2xl md:text-3xl md:w-[30%] text-theme-primaryText font-semibold mb-10">
+          Meet NovelHire: <span className="text-theme-secondaryText">Smarter Hiring Starts Here</span>
         </h1>
 
         <TabsComponent data={featuresTabData} />

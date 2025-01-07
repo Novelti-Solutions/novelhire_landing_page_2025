@@ -56,15 +56,13 @@ const ContactUsForm = () => {
   }, [isSubmitted.value, error]);
 
   return (
-    <motion.div className="flex w-full flex-col gap-3 px-4 py-4 lg:w-1/2 lg:py-0">
-      <h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="text-3xl font-bold md:text-5xl lg:text-6xl"
-      >
-        Contact us
-      </h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="flex w-full flex-col gap-3 px-4 py-4 lg:w-1/2 lg:py-0"
+    >
+      <h1 className="text-3xl font-bold md:text-5xl lg:text-6xl text-theme-primaryText">Contact us</h1>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="my-4">
@@ -89,7 +87,7 @@ const ContactUsForm = () => {
 
             <div className="col-span-12">
               <div className="flex items-center gap-2">
-                <Button disabled={!form.watch().isagree || loading} className="rounded-full" size="lg">
+                <Button disabled={!form.watch().isagree || loading} className="rounded-full bg-theme-primary hover:bg-theme-primary" size="lg">
                   {loading && <Loader2 className="animate-spin" />} Submit
                 </Button>
 

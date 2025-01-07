@@ -28,9 +28,9 @@ const TimelineItem = ({ number, leftContent, rightContent, isLast }) => (
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.3 * number }} className="w-full md:w-1/2 lg:w-1/2">
         {rightContent && (
           <div className=" p-4 flex flex-col gap-3 ">
-            <h3 className="text-xl md:text-2xl lg:text-2xl text-theme-primary font-semibold">{rightContent.title}</h3>
-            <p className="text-muted-foreground font-semibold">{rightContent.description}</p>
-            <span>{rightContent.caption}</span>
+            <h3 className="text-xl md:text-2xl lg:text-2xl text-theme-primaryText font-semibold">{rightContent.title}</h3>
+            <p className="text-theme-secondaryText font-semibold">{rightContent.description}</p>
+            <span className="text-theme-mutedText text-sm">{rightContent.caption}</span>
           </div>
         )}
       </motion.div>

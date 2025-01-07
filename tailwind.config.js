@@ -72,8 +72,19 @@ module.exports = {
         },
         theme: {
           primary: "var(--theme-primary)",
-          secondary: "var(--theme-secondary)",
-          accent: "var(--theme-accent)",
+          secondary:"var(--theme-secondary)",
+          accentBlue:"var(--theme-accent-blue)",
+          accentPurpleLight:"var(--theme-accent-purple-light)",
+          accentPink:"var(--theme-accent-pink)",
+          primaryText:"var(--theme-primary-text)",
+          secondaryText:"var(--theme-secondary-text)",
+          mutedText:"var(--theme-muted-text)",
+          inverseText:"var(--theme-inverse-text)",
+          gradientPinkStart:"var(--theme-gradient-pink-start)",
+          gradientPinkMid:"var(--theme-gradient-pink-mid)",
+          gradientPurpleEnd:"var(--theme-gradient-purple-end)",
+          gradientPrimary:"var(--theme-gradient-primary)",
+          gradientCTA:"var(--theme-gradient-cta)"
         },
       },
       keyframes: {

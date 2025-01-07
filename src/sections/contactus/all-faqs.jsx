@@ -52,7 +52,7 @@ const payload = {
   },
   isCountOnly: false,
 };
-const AllFaqs = () => {
+const  AllFaqs = () => {
   //   states
   const [currentAccordion, setCurrentAccordion] = useState(null);
   const [inputValue, setInputValue] = useState("");
@@ -91,8 +91,8 @@ const AllFaqs = () => {
         <Badge variant="outline" className="rounded-full">
           NovelHire
         </Badge>
-        <h3 className="text-xl font-semibold md:text-3xl lg:text-5xl">Frequently Asked Questions</h3>
-        <p className="text-sm text-muted-foreground">
+        <h3 className="text-xl font-semibold md:text-3xl lg:text-5xl text-theme-primaryText">Frequently Asked Questions</h3>
+        <p className="text-sm text-theme-mutedText">
           All Plans come with a <span className="text-sm font-bold text-black">14-day</span> free trial period.
         </p>
       </div>
@@ -118,7 +118,7 @@ const AllFaqs = () => {
       </div>
 
       <div className="my-4 px-8">
-        <h3 className="px-5 text-sm font-semibold md:text-lg lg:text-xl">{currentCategory.name}:</h3>
+        <h3 className="px-5 text-sm font-semibold md:text-lg lg:text-xl text-theme-primaryText">{currentCategory.name}:</h3>
 
         {/* Loading State */}
         {loading && <div className="my-4 border-2 p-4 text-center text-gray-500">Loading FAQs...</div>}
@@ -138,8 +138,8 @@ const AllFaqs = () => {
           <Accordion type="single" value={currentAccordion} onValueChange={setCurrentAccordion} collapsible className="w-full">
             {data.map(({ id, question, answer }) => (
               <AccordionItem key={id} value={id} className="px-4">
-                <AccordionTrigger className="hover:no-underline">{question}</AccordionTrigger>
-                <AccordionContent>{answer}</AccordionContent>
+                <AccordionTrigger className="hover:no-underline text-theme-primaryText">{question}</AccordionTrigger>
+                <AccordionContent className="text-theme-secondaryText">{answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

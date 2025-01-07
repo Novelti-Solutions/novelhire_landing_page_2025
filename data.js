@@ -54,7 +54,7 @@ export const featuresTabData = [
               </Button>
             </Link>
 
-            <p> Evaluate Skills That Matter</p>
+            <p className="text-base text-theme-primaryText"> Evaluate Skills That Matter</p>
           </div>
         }
       />

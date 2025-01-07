@@ -23,11 +23,11 @@ const Assessment = ({
       >
         {/* Content Section - Fixed width */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} className="w-full md:w-1/2">
-          <p className="tracking-widest uppercase text-xs font-semibold  mb-3">{subheading}</p>
+          <p className="tracking-widest uppercase text-xs font-semibold text-theme-mutedText mb-3">{subheading}</p>
           <h1 className="md:text-3xl text-2xl font-semibold text-theme-secondary mb-8">
-            {heading1} <span className="text-theme-primary">{heading2}</span>
+            {heading1} <span className="text-theme-primaryText">{heading2}</span>
           </h1>
-          <p className="text-base text-justify mb-8">{para}</p>
+          <p className="text-base text-justify mb-8 text-theme-secondaryText">{para}</p>
           <Button className="rounded-none">{buttonText}</Button>
         </motion.div>
 
@@ -58,7 +58,7 @@ const Assessment = ({
           className="flex justify-between items-center gap-4 flex-col md:flex-row"
         >
           {footer.map((item, index) => (
-            <p key={`${item}-${index}`} className="flex justify-center items-center gap-2 font-semibold">
+            <p key={`${item}-${index}`} className="flex justify-center items-center gap-2 text-theme-primaryText">
               <Goal className="h-4 w-4 inline-block" />
               {item}
             </p>

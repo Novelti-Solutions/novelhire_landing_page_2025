@@ -6,30 +6,30 @@ import React from "react";
 const HeroPage = ({ isReverse, title, caption, content }) => {
   return (
     <div className="flex w-full flex-col items-center gap-6 text-center lg:w-[40%] lg:items-start lg:text-start">
-      <span className="text-xs font-bold uppercase">{caption}</span>
-      <h2 className="font-mono text-3xl font-bold md:text-5xl lg:text-6xl">
+      <span className="text-xs font-bold uppercase text-theme-mutedText">{caption}</span>
+      <h2 className="font-mono text-3xl font-bold md:text-5xl lg:text-6xl text-theme-primaryText">
         {title}
       </h2>
 
-      <p className="text-sm font-semibold md:text-base lg:text-lg">{content}</p>
+      <p className="text-sm md:text-base lg:text-lg text-theme-secondaryText">{content}</p>
       {/* address location */}
       <div className="flex flex-col gap-3 lg:flex-row">
         <div className="flex flex-col items-center space-y-4 lg:items-start">
-          <div className="flex gap-2 font-semibold">
+          <div className="flex gap-2 font-semibold text-theme-primaryText">
             <MapPin />
             <span>Address</span>
           </div>
-          <p className="text-base text-muted-foreground">
+          <p className="text-base text-theme-mutedText">
             No 14, Old Madras Road,Bengaluru - 560049
           </p>
         </div>
 
         <div className="flex flex-col items-center space-y-4 lg:items-start">
-          <div className="flex gap-2 font-semibold">
+          <div className="flex gap-2 font-semibold text-theme-primaryText">
             <MapPin />
             <span>Support</span>
           </div>
-          <p className="text-nowrap text-sm font-semibold text-muted-foreground">
+          <p className="text-nowrap text-sm font-semibold text-secondaryText">
             Email :{" "}
             <span className="text-theme-primary">hello@novelhire.com</span>
           </p>

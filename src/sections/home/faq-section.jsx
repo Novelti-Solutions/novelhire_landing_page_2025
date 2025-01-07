@@ -35,15 +35,15 @@ const FAQSection = () => {
     <div className=" p-8 md:py-10 lg:py-10">
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="flex flex-col items-center justify-between lg:flex-row mx-auto max-w-screen-xl">
         <div className="flex items-center flex-col gap-2  lg:items-start">
-          <span className="text-xs font-bold uppercase text-muted-foreground">FAQ Section</span>
-          <h2 className="text-2xl text-theme-primary  font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
-            Frequently asked <span className="text-fuchsia-950">questions</span>
+          <span className="text-xs font-bold uppercase text-theme-mutedText">FAQ Section</span>
+          <h2 className="text-2xl text-theme-primaryText  font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
+            Frequently asked <span className="text-theme-secondary">questions</span>
           </h2>
 
-          <p className="text-sm font-semibold text-blue-950  md:text-base lg:text-base">Everything you need to know about Spark</p>
+          <p className="text-sm font-semibold text-theme-secondaryText  md:text-base lg:text-base">Everything you need to know about Spark</p>
         </div>
         <div className="flex flex-col items-center lg:items-start  gap-4">
-          <h4 className="text-sm">Still have a questions in mind? contact us directly!</h4>
+          <h4 className="text-sm text-theme-secondaryText">Still have a questions in mind? contact us directly!</h4>
           <div>
             <Button className="rounded-none">Contact us</Button>
           </div>
@@ -71,8 +71,8 @@ const FAQSection = () => {
           <div className="grid my-8 gap-x-4 grid-cols-12">
             {data?.map(({ id, question, answer }) => (
               <AccordionItem key={id} value={id} className={cn("col-span-12", "lg:col-span-6", "px-4", "bg-white")}>
-                <AccordionTrigger className="hover:no-underline">{question}</AccordionTrigger>
-                <AccordionContent>{answer}</AccordionContent>
+                <AccordionTrigger className="hover:no-underline text-theme-primaryText">{question}</AccordionTrigger>
+                <AccordionContent className="text-theme-secondaryText">{answer}</AccordionContent>
               </AccordionItem>
             ))}
           </div>

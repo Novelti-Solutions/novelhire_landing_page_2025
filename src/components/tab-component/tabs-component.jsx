@@ -22,8 +22,11 @@ const TabsComponent = ({ data }) => {
                 )}
                 onClick={() => setActive(index)}
               >
-                {tab.symbol}
-                <h6 className="text-md ">{tab.title}</h6>
+                <span className={active === index ? "text-theme-accentPurpleLight" : "text-theme-primaryText"}>{tab.symbol}</span>
+
+                <h6 className={`text-md ${active === index ? "text-theme-accentPurpleLight" : "text-theme-primaryText"} text-theme-primaryText`}>
+                  {tab.title}
+                </h6>
               </div>
             );
           })}
@@ -33,11 +36,7 @@ const TabsComponent = ({ data }) => {
       {data[active]?.keyPoints.length > 0 && (
         <div className="w-full flex justify-between items-center gap-4 flex-col md:flex-row mt-10">
           {data[active]?.keyPoints.map((item, index) => (
-            <Button
-              variant="ghost"
-              key={`${item}-${index}`}
-              className="text-wrap"
-            >
+            <Button variant="ghost" key={`${item}-${index}`} className="text-wrap text-theme-primaryText">
               <Goal className="h-4 w-4" />
               {item}
             </Button>

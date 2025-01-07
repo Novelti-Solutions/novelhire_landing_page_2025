@@ -76,11 +76,11 @@ const HowItWorks = () => {
       <motion.div   initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1,delay:0.3 }} className="flex flex-col max-w-screen-sm mx-auto gap-4 my-4 text-center">
-        <span className="text-xs font-bold uppercase">How NovelHire Works</span>
-        <h2 className="font-mono text-theme-primary text-3xl font-bold md:text-4xl lg:text-5xl">
+        <span className="text-xs font-bold uppercase text-theme-mutedText">How NovelHire Works</span>
+        <h2 className="font-mono text-theme-primaryText text-3xl font-bold md:text-4xl lg:text-5xl">
           Take a look at how we make it done
         </h2>
-        <p className="text-sm font-semibold md:text-base lg:text-lg ">
+        <p className="text-sm font-semibold md:text-base lg:text-lg text-theme-secondaryText">
           Our streamlined, step-by-step process ensures you hire top talent
           faster and more effectively.
         </p>
@@ -98,7 +98,7 @@ const HowItWorks = () => {
         ))}
       </div>
       <div className="flex justify-center ">
-        <Button className="bg-theme-primary hover:bg-theme-secondary">
+        <Button className="bg-theme-secondary">
           Get Started
         </Button>
       </div>

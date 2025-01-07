@@ -99,18 +99,18 @@ const RequestDemoForm = () => {
         transition={{ duration: 1, delay: 0.6 }}
         className="flex flex-col gap-4 text-center"
       >
-        <h3 className="text-3xl font-semibold md:text-5xl lg:text-6xl">
+        <h3 className="text-3xl font-semibold md:text-5xl lg:text-6xl text-theme-primaryText">
           Book a <br /> free Demo
         </h3>
-        <p className="text-sm md:text-base lg:text-lg">
+        <p className="text-sm md:text-base lg:text-lg text-theme-secondaryText">
           Discover the future of hiring with our AI-powered interview solution. Schedule a personalized demo to see how our technology can streamline
           your recruitment process and find the best candidates efficiently.
         </p>
       </motion.div>
 
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.9 }} className="py-14">
-        <h4 className="text-xl font-bold">Get Started With NovelHire</h4>
-        <p className="my-2 font-semibold">
+        <h4 className="text-xl font-bold text-theme-primaryText">Get Started With NovelHire</h4>
+        <p className="my-2 text-theme-secondaryText">
           Experience the advantages of AI in recruitment. Book your demo today and revolutionize your hiring process!
         </p>
       </motion.div>
@@ -171,7 +171,7 @@ const RequestDemoForm = () => {
                     </>
                   }
                 />
-                <Button disabled={!form.watch().isagree || loading} className="rounded-full" size="lg">
+                <Button disabled={!form.watch().isagree || loading} className="rounded-full bg-theme-primary" size="lg">
                   {loading && <Loader2 className="animate-spin" />} Submit
                 </Button>
               </div>

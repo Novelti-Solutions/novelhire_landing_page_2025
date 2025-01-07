@@ -17,10 +17,10 @@ const Content = ({ title, subTitle, buttons }) => {
       </div>
 
       <div className="lg:w-2/3 flex flex-col p-12 gap-8 bg-white">
-        <h3 className="text-xl lg:text-2xl text-theme-primary font-medium">
+        <h3 className="text-xl lg:text-2xl text-theme-primaryText font-medium">
           {title}
         </h3>
-        <p className="text-sm lg:text-base">{subTitle}</p>
+        <p className="text-sm lg:text-base text-theme-secondaryText">{subTitle}</p>
         {buttons}
       </div>
     </div>
