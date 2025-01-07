@@ -51,7 +51,12 @@ export const footerData = {
       url: "https://www.instagram.com/novelhire/",
       isTarget: true,
     },
-    { title: "LinkedIn", isNew: false, url: "#", isTarget: true },
+    {
+      title: "LinkedIn",
+      isNew: false,
+      url: "https://www.linkedin.com/products/novelti-solutions-novelhire/",
+      isTarget: true,
+    },
   ],
 };
 
