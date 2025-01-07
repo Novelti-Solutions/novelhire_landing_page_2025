@@ -9,8 +9,8 @@ import Link from "next/link";
 const HomeLayout = ({ children }) => {
   return (
     <div>
-      <div className="bg-gradient-to-br   from-fuchsia-50 to-fuchsia-200">
-        <div className="bg-[url('/grid-square.svg')]    bg-cover bg-center  w-full">
+      <div className="bg-gradient-to-br    from-fuchsia-50 to-fuchsia-200">
+        <div className="bg-[url('/grid-square.svg')]  bg-cover bg-center  w-full">
           <Header />
           <HomePage
             caption="NovelHire Talent Solutions"
@@ -45,9 +45,7 @@ const HomeLayout = ({ children }) => {
         </div>
       </div>
 
-      <main className="bg-[#f9f7f7]">
-        {children}
-      </main>
+      <main className="bg-[#f9f7f7]">{children}</main>
       {/* <Footer /> */}
       <Footer />
     </div>

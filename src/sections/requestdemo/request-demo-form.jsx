@@ -87,10 +87,11 @@ const RequestDemoForm = () => {
       toast.error("Something went wrong");
       isSubmitted.onFalse();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSubmitted.value, error]);
 
   return (
-    <div className="relative mx-auto my-14 max-w-screen-sm py-4">
+    <div className="relative mx-auto my-14 max-w-screen-sm p-4">
       {/* <div className="absolute left-1/2 top-0 -z-10 h-72 w-1/2 -translate-x-1/2 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 blur-[200px]" /> */}
 
       <div className="flex flex-col gap-4 text-center">
@@ -113,7 +114,7 @@ const RequestDemoForm = () => {
       </div>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="my-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="my-4 ">
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 lg:col-span-6">
               <RHFTextField

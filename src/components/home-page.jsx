@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 const HomePage = ({ caption, title, subTitle, buttons, isReverse }) => {
   return (
-    <div className="mx-auto max-w-screen-xl p-8 md:py-10 lg:py-20">
+    <div className="mx-auto max-w-screen-xl grid place-items-center h-auto p-8 lg:p-0 lg:min-h-[calc(100vh-4rem)]">
       <div
         className={cn(
           "flex justify-between flex-col",

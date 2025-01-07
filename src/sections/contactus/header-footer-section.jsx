@@ -10,24 +10,24 @@ const HeaderHeroSection = () => {
       {/* image1 */}
       <Image
         src="/features/bg-top.svg"
-        alt="df"
+        alt="top"
         width={500}
         height={500}
-        className="w-full h-48 -z-10  opacity-40 object-cover absolute top-0 left-0"
+        className="w-full h-36 -z-10  opacity-30 object-cover absolute top-0 left-0"
       />
       {/* image2 */}
       <Image
         src="/features/bg-bottom.svg"
-        alt="df"
+        alt="bottom"
         width={500}
         height={500}
-        className="w-full h-48 -z-10 opacity-40  object-cover absolute bottom-0 left-0"
+        className="w-full h-36 -z-10 opacity-30  object-cover absolute bottom-0 left-0"
       />
 
       <Header />
       <div
         className={cn(
-          "flex flex-col mx-auto max-w-screen-xl py-16 md:justify-between lg:flex-row"
+          "flex flex-col mx-auto max-w-screen-xl  place-items-center h-auto p-8 lg:py-0 lg:min-h-[calc(100vh-4rem)]  md:justify-between lg:flex-row"
         )}
       >
         <HeroPage
