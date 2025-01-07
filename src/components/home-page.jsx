@@ -24,7 +24,7 @@ const HomePage = ({ caption, title, subTitle, buttons, isReverse }) => {
             {title}
           </h2>
 
-          <p className="text-sm text-theme-secondaryText text-theme-secondaryText md:text-base lg:text-lg">{subTitle}</p>
+          <p className="text-sm text-theme-secondaryText md:text-base lg:text-lg">{subTitle}</p>
 
           {buttons && buttons}
         </motion.div>
