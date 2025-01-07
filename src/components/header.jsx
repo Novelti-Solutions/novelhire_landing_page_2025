@@ -29,7 +29,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/features"
-                  className="text-sm font-semibold uppercase"
+                  className="text-sm font-semibold uppercase text-theme-secondaryText"
                 >
                   Features
                 </Link>
@@ -37,7 +37,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/usecases"
-                  className="text-sm font-semibold uppercase"
+                  className="text-sm uppercase text-theme-secondaryText"
                 >
                   usecases
                 </Link>
@@ -45,7 +45,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/requestdemo"
-                  className="text-sm font-semibold uppercase"
+                  className="text-sm font-semibold uppercase text-theme-secondaryText"
                 >
                   Pricing
                 </Link>
@@ -53,7 +53,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/contactus"
-                  className="text-sm font-semibold uppercase"
+                  className="text-sm uppercase text-theme-secondaryText"
                 >
                   help
                 </Link>
