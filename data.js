@@ -1,11 +1,21 @@
 import Content from "@/components/tab-component/content";
 import { Button } from "@/components/ui/button";
-import { BriefcaseConveyorBelt, Handshake, Sparkles, Video, Workflow } from "lucide-react";
+import {
+  BriefcaseConveyorBelt,
+  Handshake,
+  Sparkles,
+  Video,
+  Workflow,
+} from "lucide-react";
 import Link from "next/link";
 
 export const footerData = {
   Features: [
-    { title: "Smart, Customizable Assessments", isNew: false, url: "/features" },
+    {
+      title: "Smart, Customizable Assessments",
+      isNew: false,
+      url: "/features",
+    },
     { title: "Workflow Automation", isNew: false, url: "/features" },
     { title: "Data-Driven Insights", isNew: false, url: "/features" },
     { title: "More...", isNew: true, url: "/features" },
@@ -23,10 +33,25 @@ export const footerData = {
     { title: "Monitoring", isNew: true, url: "#" },
   ],
   Social: [
-    { title: "Facebook", isNew: false, url: "#" },
-    { title: "Twitter", isNew: false, url: "#" },
-    { title: "Instagram", isNew: false, url: "#" },
-    { title: "LinkedIn", isNew: false, url: "#" },
+    {
+      title: "Facebook",
+      isNew: false,
+      url: "https://www.facebook.com/profile.php?id=61558057150364",
+      isTarget: true,
+    },
+    {
+      title: "Twitter",
+      isNew: false,
+      url: "https://x.com/novelhire",
+      isTarget: true,
+    },
+    {
+      title: "Instagram",
+      isNew: false,
+      url: "https://www.instagram.com/novelhire/",
+      isTarget: true,
+    },
+    { title: "LinkedIn", isNew: false, url: "#", isTarget: true },
   ],
 };
 
@@ -48,7 +73,10 @@ export const featuresTabData = [
               </Button>
             </Link>
 
-            <p className="text-base text-theme-primaryText"> Evaluate Skills That Matter</p>
+            <p className="text-base text-theme-primaryText">
+              {" "}
+              Evaluate Skills That Matter
+            </p>
           </div>
         }
       />
@@ -261,7 +289,11 @@ export const usecasesTabData = [
     id: 4,
     title: "Enhance",
     symbol: <Handshake className="h-4 w-4" />,
-    keyPoints: ["Offer user-friendly assessments", "Provide timely feedback to candidates", "Ensure every interaction reflects your brand values"],
+    keyPoints: [
+      "Offer user-friendly assessments",
+      "Provide timely feedback to candidates",
+      "Ensure every interaction reflects your brand values",
+    ],
     content: (
       <Content
         title="Enhancing Candidate Experience"
