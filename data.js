@@ -1,38 +1,32 @@
 import Content from "@/components/tab-component/content";
 import { Button } from "@/components/ui/button";
-import {
-  BriefcaseConveyorBelt,
-  Handshake,
-  Sparkles,
-  Video,
-  Workflow,
-} from "lucide-react";
+import { BriefcaseConveyorBelt, Handshake, Sparkles, Video, Workflow } from "lucide-react";
 import Link from "next/link";
 
 export const footerData = {
-  features: [
-    { title: "Budgeting", isNew: false },
-    { title: "Savings", isNew: false },
-    { title: "Accounts", isNew: false },
-    { title: "Secured Data", isNew: true },
+  Features: [
+    { title: "Smart, Customizable Assessments", isNew: false, url: "/features" },
+    { title: "Workflow Automation", isNew: false, url: "/features" },
+    { title: "Data-Driven Insights", isNew: false, url: "/features" },
+    { title: "More...", isNew: true, url: "/features" },
   ],
-  solutions: [
-    { title: "Financial Planing", isNew: false },
-    { title: "Investment", isNew: true },
-    { title: "Security", isNew: false },
-    { title: "Fraud Detection", isNew: false },
+  Usecases: [
+    { title: "Scaling a Growing Team", isNew: false, url: "/usecases" },
+    { title: "Hiring for Specialized Roles", isNew: true, url: "/usecases" },
+    { title: "Improving Hiring Efficiency", isNew: false, url: "/usecases" },
+    { title: "More..", isNew: false, url: "/usecases" },
   ],
-  resources: [
-    { title: "Blog", isNew: false },
-    { title: "Community", isNew: false },
-    { title: "Tutorials", isNew: false },
-    { title: "Monitoring", isNew: true },
+  Resources: [
+    { title: "Blog", isNew: false, url: "#" },
+    { title: "Contact Support", isNew: false, url: "#" },
+    { title: "Help", isNew: false, url: "#" },
+    { title: "Monitoring", isNew: true, url: "#" },
   ],
-  social: [
-    { title: "Facebook", isNew: false },
-    { title: "Twitter", isNew: false },
-    { title: "Instagram", isNew: false },
-    { title: "LinkedIn", isNew: false },
+  Social: [
+    { title: "Facebook", isNew: false, url: "#" },
+    { title: "Twitter", isNew: false, url: "#" },
+    { title: "Instagram", isNew: false, url: "#" },
+    { title: "LinkedIn", isNew: false, url: "#" },
   ],
 };
 
@@ -267,11 +261,7 @@ export const usecasesTabData = [
     id: 4,
     title: "Enhance",
     symbol: <Handshake className="h-4 w-4" />,
-    keyPoints: [
-      "Offer user-friendly assessments",
-      "Provide timely feedback to candidates",
-      "Ensure every interaction reflects your brand values",
-    ],
+    keyPoints: ["Offer user-friendly assessments", "Provide timely feedback to candidates", "Ensure every interaction reflects your brand values"],
     content: (
       <Content
         title="Enhancing Candidate Experience"

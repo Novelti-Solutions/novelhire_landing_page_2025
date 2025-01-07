@@ -29,7 +29,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/features"
-                  className="text-sm font-semibold uppercase text-theme-secondaryText"
+                  className="text-sm uppercase text-theme-secondaryText"
                 >
                   Features
                 </Link>
@@ -45,7 +45,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/requestdemo"
-                  className="text-sm font-semibold uppercase text-theme-secondaryText"
+                  className="text-sm uppercase text-theme-secondaryText"
                 >
                   Pricing
                 </Link>

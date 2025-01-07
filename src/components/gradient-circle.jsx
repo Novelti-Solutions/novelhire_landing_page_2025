@@ -7,7 +7,7 @@ import { useThemeColor, themes } from "@/contexts/theme-context";
 const GradientCircle = () => {
   const { currentTheme } = useThemeColor();
   
-  const themeColor = themes[currentTheme].primary;
+  const themeColor = themes[currentTheme].secondary;
 
   return (
     <Button
