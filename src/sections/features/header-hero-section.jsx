@@ -11,18 +11,18 @@ const HeaderHeroSection = () => {
       {/* image1 */}
       <Image
         src="/features/bg-top.svg"
-        alt="df"
+        alt="top"
         width={500}
         height={500}
-        className="w-full h-48 -z-10  opacity-40 object-cover absolute top-0"
+        className="w-full h-48 -z-10  opacity-10 object-cover absolute top-0"
       />
       {/* image2 */}
       <Image
         src="/features/bg-bottom.svg"
-        alt="df"
+        alt="bottom"
         width={500}
         height={500}
-        className="w-full h-48 -z-10 opacity-40  object-cover absolute bottom-0"
+        className="w-full h-48 -z-10 opacity-10  object-cover absolute bottom-0"
       />
 
       <Header />

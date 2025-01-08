@@ -5,12 +5,21 @@ import Footer from "./footer";
 import { Button } from "./ui/button";
 import { ChevronRight, User } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const HomeLayout = ({ children }) => {
   return (
     <div>
-      <div className="bg-gradient-to-br    from-fuchsia-50 to-fuchsia-200">
-        <div className="bg-[url('/grid-square.svg')]  bg-cover bg-center  w-full">
+      <div className="bg-gradient-to-br     from-fuchsia-50 to-fuchsia-200">
+        <div className="relative z-10 w-full">
+          <Image
+            src="/grid-square.svg"
+            alt="top"
+            width={500}
+            height={500}
+            className="w-full h-full  opacity-40 -z-10 object-cover absolute top-0"
+          />
+
           <Header />
           <HomePage
             caption="NovelHire Talent Solutions"
