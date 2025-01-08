@@ -1,9 +1,8 @@
-'use client'
-
+"use client";
 
 import { Button } from "@/components/ui/button";
 import TimelineItem from "./time-line";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 // items
 const items = [
@@ -73,16 +72,17 @@ const items = [
 const HowItWorks = () => {
   return (
     <section className="py-8">
-      <motion.div   initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1,delay:0.3 }} className="flex flex-col max-w-screen-sm mx-auto gap-4 my-4 text-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="flex flex-col max-w-screen-sm mx-auto gap-4 my-4 text-center"
+      >
         <span className="text-xs font-bold uppercase text-theme-mutedText">How NovelHire Works</span>
-        <h2 className="font-mono text-theme-primaryText text-3xl font-bold md:text-4xl lg:text-5xl">
-          Take a look at how we make it done
-        </h2>
+        <h2 className="font-mono text-theme-primaryText text-3xl font-bold md:text-4xl lg:text-5xl">Take a look at how we make it done</h2>
         <p className="text-sm font-semibold md:text-base lg:text-lg text-theme-secondaryText">
-          Our streamlined, step-by-step process ensures you hire top talent
-          faster and more effectively.
+          Our streamlined, step-by-step process ensures you hire top talent faster and more effectively.
         </p>
       </motion.div>
 
@@ -98,9 +98,7 @@ const HowItWorks = () => {
         ))}
       </div>
       <div className="flex justify-center ">
-        <Button className="bg-theme-secondary">
-          Get Started
-        </Button>
+        <Button className="bg-theme-secondary">Get Started</Button>
       </div>
     </section>
   );

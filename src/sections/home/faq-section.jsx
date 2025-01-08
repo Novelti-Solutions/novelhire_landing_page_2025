@@ -33,7 +33,13 @@ const FAQSection = () => {
 
   return (
     <div className=" p-8 md:py-10 lg:py-10">
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="flex flex-col items-center justify-between lg:flex-row mx-auto max-w-screen-xl">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center justify-between lg:flex-row mx-auto max-w-screen-xl"
+      >
         <div className="flex items-center flex-col gap-2  lg:items-start">
           <span className="text-xs font-bold uppercase text-theme-mutedText">FAQ Section</span>
           <h2 className="text-2xl text-theme-primaryText  font-space text-center font-bold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
@@ -64,19 +70,17 @@ const FAQSection = () => {
       )}
 
       {!loading && !error && data && data.length > 0 && (
-        <motion.div   initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 ,delay:0.6}}>
-        <Accordion type="single" value={currentAccordion} onValueChange={setCurrentAccordion} collapsible className="mx-auto max-w-screen-xl ">
-          <div className="grid my-8 gap-x-4 grid-cols-12">
-            {data?.map(({ id, question, answer }) => (
-              <AccordionItem key={id} value={id} className={cn("col-span-12", "lg:col-span-6", "px-4", "bg-white")}>
-                <AccordionTrigger className="hover:no-underline text-theme-primaryText">{question}</AccordionTrigger>
-                <AccordionContent className="text-theme-secondaryText">{answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </div>
-        </Accordion>
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} viewport={{ once: true }}>
+          <Accordion type="single" value={currentAccordion} onValueChange={setCurrentAccordion} collapsible className="mx-auto max-w-screen-xl ">
+            <div className="grid my-8 gap-x-4 grid-cols-12">
+              {data?.map(({ id, question, answer }) => (
+                <AccordionItem key={id} value={id} className={cn("col-span-12", "lg:col-span-6", "px-4", "bg-white")}>
+                  <AccordionTrigger className="hover:no-underline text-theme-primaryText">{question}</AccordionTrigger>
+                  <AccordionContent className="text-theme-secondaryText">{answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </div>
+          </Accordion>
         </motion.div>
       )}
     </div>

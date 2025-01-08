@@ -86,7 +86,7 @@ const  AllFaqs = () => {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1,delay:0.6 }} className="mx-auto max-w-screen-md my-10">
+    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1,delay:0.6 }} viewport={{ once: true }} className="mx-auto max-w-screen-md my-10">
       <div  className="flex flex-col items-center gap-4">
         <Badge variant="outline" className="rounded-full">
           NovelHire

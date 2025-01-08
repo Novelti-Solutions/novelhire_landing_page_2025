@@ -22,7 +22,7 @@ const Assessment = ({
         className={`flex justify-between items-center md:items-start gap-8 md:gap-40 flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""}`}
       >
         {/* Content Section - Fixed width */}
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} className="w-full md:w-1/2">
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} viewport={{ once: true }} className="w-full md:w-1/2">
           <p className="tracking-widest uppercase text-xs font-semibold text-theme-mutedText mb-3">{subheading}</p>
           <h1 className="md:text-3xl text-2xl font-semibold text-theme-secondary mb-8">
             {heading1} <span className="text-theme-primaryText">{heading2}</span>
@@ -32,7 +32,7 @@ const Assessment = ({
         </motion.div>
 
         {/* Image Section - Fixed dimensions */}
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.9 }} className="w-full md:w-1/2">
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.9 }} viewport={{ once: true }} className="w-full md:w-1/2">
           <div className="aspect-square w-full">
             {img ? (
               <Image
@@ -55,6 +55,7 @@ const Assessment = ({
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
+          viewport={{ once: true }}
           className="flex justify-between items-center gap-4 flex-col md:flex-row"
         >
           {footer.map((item, index) => (

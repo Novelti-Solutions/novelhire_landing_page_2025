@@ -29,7 +29,13 @@ const TeamProductivity = () => {
   return (
     <section className="bg-white">
       <div className="mx-auto  max-w-screen-xl p-8 md:py-10 lg:py-10 py-10">
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="flex items-center flex-col gap-4 ">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="flex items-center flex-col gap-4 "
+        >
           <span className="text-xs font-bold uppercase text-theme-mutedText">Content Section</span>
           <h2 className="text-2xl text-theme-primaryText text-center font-semibold md:text-4xl lg:text-5xl lg:text-start lg:leading-tight">
             Enhanced your team <span className="text-theme-secondary">productivity</span>
@@ -38,9 +44,13 @@ const TeamProductivity = () => {
           <p className="text-sm text-theme-secondaryText  md:text-base lg:text-lg">Provide insights into team performance and engagement</p>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1,delay:0.6 }} className="flex my-8 justify-evenly items-center lg:items-start flex-col lg:flex-row">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="flex my-8 justify-evenly items-center lg:items-start flex-col lg:flex-row"
+        >
           {products.map((prod) => {
             return (
               <div key={prod.id} className="flex flex-col w-80 items-start gap-2">

@@ -32,6 +32,7 @@ const HeaderHeroSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
         className={cn("flex flex-col mx-auto max-w-screen-xl  place-items-center h-auto p-8 lg:py-0 lg:min-h-[calc(100vh-4rem)]  md:justify-between lg:flex-row")}
       >
         <HeroPage

@@ -13,6 +13,7 @@ const FeaturesSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
+        viewport={{ once: true }}
         className="flex justify-center items-start flex-col cursor-pointer"
       >
         <p className="uppercase tracking-widest font-semibold mb-4 text-theme-secondaryText">Features</p>

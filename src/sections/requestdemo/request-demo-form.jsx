@@ -97,6 +97,7 @@ const RequestDemoForm = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
+        viewport={{ once: true }}
         className="flex flex-col gap-4 text-center"
       >
         <h3 className="text-3xl font-semibold md:text-5xl lg:text-6xl text-theme-primaryText">
@@ -108,7 +109,13 @@ const RequestDemoForm = () => {
         </p>
       </motion.div>
 
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.9 }} className="py-14">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.9 }}
+        viewport={{ once: true }}
+        className="py-14"
+      >
         <h4 className="text-xl font-bold text-theme-primaryText">Get Started With NovelHire</h4>
         <p className="my-2 text-theme-secondaryText">
           Experience the advantages of AI in recruitment. Book your demo today and revolutionize your hiring process!
@@ -116,9 +123,14 @@ const RequestDemoForm = () => {
       </motion.div>
 
       <Form {...form}>
-        <motion.form  initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1,delay:1 }} onSubmit={form.handleSubmit(onSubmit)} className="my-4">
+        <motion.form
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          viewport={{ once: true }}
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="my-4"
+        >
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 lg:col-span-6">
               <RHFTextField name={"name"} placeholder="Your  Name" title={"Name"} />

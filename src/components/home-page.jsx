@@ -16,7 +16,8 @@ const HomePage = ({ caption, title, subTitle, buttons, isReverse }) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1}}
+          viewport={{ once: true }}
           className="flex w-full items-center flex-col gap-4 lg:w-[40%] lg:items-start"
         >
           <span className="text-xs font-bold uppercase text-theme-mutedText">{caption}</span>
@@ -33,6 +34,7 @@ const HomePage = ({ caption, title, subTitle, buttons, isReverse }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
           className="flex  w-full bg-gray-50 justify-center lg:w-[50%] "
         >
           {/* <video

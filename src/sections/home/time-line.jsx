@@ -13,7 +13,8 @@ const TimelineItem = ({ number, leftContent, rightContent, isLast }) => (
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.3 * number}}
+        transition={{ duration: 1, delay: 0.3 * number }}
+        viewport={{ once: true }}
         className="w-full md:w-1/2 lg:w-1/2  text-right"
       >
         {leftContent && <Image src={leftContent?.path} alt={number} width={500} height={500} layout="responsive" />}
@@ -25,7 +26,13 @@ const TimelineItem = ({ number, leftContent, rightContent, isLast }) => (
       </div>
 
       {/* Right Content */}
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.3 * number }} className="w-full md:w-1/2 lg:w-1/2">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 * number }}
+        viewport={{ once: true }}
+        className="w-full md:w-1/2 lg:w-1/2"
+      >
         {rightContent && (
           <div className=" p-4 flex flex-col gap-3 ">
             <h3 className="text-xl md:text-2xl lg:text-2xl text-theme-primaryText font-semibold">{rightContent.title}</h3>
