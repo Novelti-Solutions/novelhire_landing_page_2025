@@ -13,7 +13,7 @@ const HeaderHeroSection = () => {
         alt="top"
         width={500}
         height={500}
-        className="w-full h-36 -z-10  opacity-30 object-cover absolute top-0 left-0"
+        className="w-full h-36 -z-10  opacity-10 object-cover absolute top-0 left-0"
       />
       {/* image2 */}
       <Image
@@ -21,7 +21,7 @@ const HeaderHeroSection = () => {
         alt="bottom"
         width={500}
         height={500}
-        className="w-full h-36 -z-10 opacity-30  object-cover absolute bottom-0 left-0"
+        className="w-full h-36 -z-10 opacity-10  object-cover absolute bottom-0 left-0"
       />
 
       <Header />

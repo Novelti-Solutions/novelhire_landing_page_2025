@@ -16,7 +16,7 @@ const HeaderHeroSection = () => {
         alt="top"
         width={500}
         height={500}
-        className="w-full h-36 -z-10  opacity-30 object-cover absolute top-0 left-0"
+        className="w-full h-36 -z-10  opacity-10 object-cover absolute top-0 left-0"
       />
       {/* image2 */}
       <Image
@@ -24,7 +24,7 @@ const HeaderHeroSection = () => {
         alt="bottom"
         width={500}
         height={500}
-        className="w-full h-36 -z-10 opacity-30  object-cover absolute bottom-0 left-0"
+        className="w-full h-36 -z-10 opacity-10  object-cover absolute bottom-0 left-0"
       />
 
       <Header />
@@ -33,7 +33,9 @@ const HeaderHeroSection = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className={cn("flex flex-col mx-auto max-w-screen-xl  place-items-center h-auto p-8 lg:py-0 lg:min-h-[calc(100vh-4rem)]  md:justify-between lg:flex-row")}
+        className={cn(
+          "flex flex-col mx-auto max-w-screen-xl  place-items-center h-auto p-8 lg:py-0 lg:min-h-[calc(100vh-4rem)]  md:justify-between lg:flex-row"
+        )}
       >
         <HeroPage
           caption={"Shape the Future of Talent Development Together"}
